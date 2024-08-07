@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project-TS Trinkgeldrechner</title>
+  </head>
+  <body>
+    <h1>Project-TS Trinkgeldrechner</h1>
+    <ul>
+      <li>
+        Erstelle einen Rechner, mit dem du aus dem Rechnungsbetrag folgende
+        Sachen machen kannst:
+      </li>
+      <li>1) Du kannst den Rechnungsbetrag eingeben</li>
+      <li>2) Du kannst angeben, wie viele Leute sich den Betrag teilen</li>
+      <li>
+        3) Du kannst das Trinkgeld berechnen, indem du je nach Zufriedenheit mit
+        dem Service einen unterschiedlichen Prozentsatz (Schlechter Service: 2%
+        Trinkgeld, Mittlerer Service: 10% Trinkgeld, Super Service: 20%
+        Trinkgeld) auswählst.
+      </li>
+    </ul>
+
+    <section>
+      <div id="Trinkgeldrechner">
+        <h2>Trinkgeldrechner</h2>
+        <form id="Form" action="">
+          <label id="LabelOne" for="">Wie hoch ist die Rechnung ?</label>
+          <div>
+            <div id="IconOne"></div>
+            <input id="InputOne" type="number" />
+          </div>
+          <label id="LabelTwo" for=""
+            >Wie viele Menschen teilen sich die Rechnung ?</label
+          >
+          <div>
+            <div id="IconTwo"></div>
+            <input id="InputTwo" type="number" />
+          </div>
+          <select id="Selection" name="" id=""></select>
+        </form>
+        <button id="Button">Berechne</button>
+      </div>
+    </section>
+
+    <a href="../../index.html">Back to Home</a>
+
+    <script
+      type="module"
+      src="../Project-TS Trinkgeldrechner/Project-TS Trinkgeldrechner.ts"
+    ></script>
+  </body>
+</html>
