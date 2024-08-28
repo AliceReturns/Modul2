@@ -4,7 +4,7 @@ const calculateSumAndMore = (
   a: number,
   b: number,
   callback: (result1: number) => number,
-  callback2: (result2: number) => number
+  callback2: (result2: number) => string
 ) => {
   const sum = a + b;
   const result1 = callback(sum);
@@ -25,3 +25,19 @@ const toBinaryString = (result2: number): string => {
 // Beispiel: Aufruf von calculateSumAndMore
 const finalResult = calculateSumAndMore(5, 10, doubleValue, toBinaryString);
 console.log("Finales Ergebnis von calculateSumAndMore:", finalResult);
+
+// Beispiele: Aufruf von calculateSumAndMore mit verschiedenen Zahlen
+const testCases = [
+  { a: 5, b: 10 },
+  { a: 7, b: 15 },
+  { a: 3, b: 6 },
+  { a: 12, b: 25 },
+];
+
+testCases.forEach(({ a, b }) => {
+  const finalResult = calculateSumAndMore(a, b, doubleValue, toBinaryString);
+  console.log(
+    `Finales Ergebnis von calculateSumAndMore für ${a} und ${b}:`,
+    finalResult
+  );
+});
