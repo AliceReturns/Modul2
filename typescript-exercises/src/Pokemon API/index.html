@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="icon" href="./IMG/pikachu.png" />
+    <script type="module" src="./app.ts" defer></script>
+    <title>Pokemon API</title>
+  </head>
+  <body>
+    <img
+      id="pokemonLogo"
+      src="./IMG/pngegg.png"
+      alt="Pokemon Logo"
+      width="300px"
+    />
+    <br />
+    <form id="searchForm" action="">
+      <input
+        id="pokemonNameSearch"
+        type="text"
+        placeholder="Enter Pokemon Name or a Number to search up to 650 different Pokemon"
+      />
+      <br />
+    </form>
+    <div>
+      <button type="submit" id="findBtn">Search Pokemon</button>
+      <button type="button" id="randomBtn">Random Pokemon</button>
+    </div>
+    <form action="">
+      <div id="loading">
+        <img
+          src="./IMG/Animation - 1725455751757.gif"
+          alt="pokeball"
+          width="100px"
+        />
+      </div>
+    </form>
+    <div id="output"></div>
+    <br />
+
+    <a href="../../index.html">Back to Home</a>
+  </body>
+</html>
