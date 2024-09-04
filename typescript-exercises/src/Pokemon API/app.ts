@@ -1,3 +1,5 @@
+import { set } from "date-fns";
+
 console.clear();
 
 const form = document.getElementById("searchForm") as HTMLFormElement;
@@ -31,19 +33,19 @@ const getPokemon = async (url: string, text: string) => {
       },
     } = data;
 
-    loading.classList.add("d-none");
-    result.className = "result active";
-    result.innerHTML = `<div class="pokebox found">
-            <span class="closebox">x</span>
-            <img src="${front_default}" alt="${name}" class="pokemon">
-            <h3 class="pokename">${name}</h3>
-            <p class="pokenumber">#${id.toString().padStart(3, "0")}</p>
-      </div>`;
-    search.value = "";
+    setTimeout(() => {
+      loading.classList.add("d-none");
+      result.className = "output";
+      result.innerHTML = `<div class="pokebox found">
+                <span class="closebox">x</span>
+                <img src="${front_default}" alt="${name}" class="pokemon">
+                <h3 class="pokename">${name}</h3>
+                <p class="pokenumber">#${id.toString().padStart(3, "0")}</p>
+          </div>`;
+      search.value = "";
+    }, 2000);
   } catch (error) {
     console.error(error);
-  } finally {
-    loading.classList.add("d-none");
   }
 };
 
