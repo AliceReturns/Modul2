@@ -46,6 +46,21 @@ const getPokemon = async (url: string, text: string) => {
     }, 2000);
   } catch (error) {
     console.error(error);
+    setTimeout(() => {
+      loading.classList.add("d-none");
+      result.className = "output";
+      let pokeNumber = search.value
+        ? Number(search.value)
+          ? search.value
+          : `${search.value}`
+        : "";
+      result.innerHTML = `div class="pokebox notfound">
+        <span class="closebox">x</span>
+        <h1><span>4</span><img src="./img/pokeball.png" alt="pokeball"/><span>4</span></h1>
+        <p>Pokemon <span class="pokenumber">${pokeNumber}</span> not found</p>
+      </div>`;
+      search.value = "";
+    }, 2000);
   }
 };
 
