@@ -1,4 +1,4 @@
-import { set } from "date-fns";
+import { intervalToDuration, set } from "date-fns";
 
 console.clear();
 
@@ -11,6 +11,14 @@ form.addEventListener("submit", (event) => {
   event.preventDefault();
   loading.classList.remove("d-none");
   loadPokemon();
+});
+
+const removeResult = () => {};
+
+result.addEventListener("click", (removeResult) => {
+  if (event.target.classList.contains("closebox")) {
+    result.className = "output d-none";
+  }
 });
 
 const getPokemon = async (url: string, text: string) => {
@@ -70,3 +78,5 @@ function loadPokemon() {
   const url = `https://pokeapi.co/api/v2/pokemon/${text}`;
   getPokemon(url, text);
 }
+
+TODO;
