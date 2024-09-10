@@ -49,3 +49,6 @@ const donkeyRecord: Record<Donkey, IDonkey> = {
     favoriteFood: "strawberries",
   },
 };
+
+console.log(donkeyRecord);
+console.log(donkeyRecord.Coco);
